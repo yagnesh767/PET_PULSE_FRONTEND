@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/Theme.PetPulse">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <!-- Firebase Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Splash -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding -->
+        <activity android:name=".WelcomeActivity1" />
+        <activity android:name=".WelcomeActivity2" />
+        <activity android:name=".WelcomeActivity3" />
+
+        <!-- Auth -->
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+
+        <!-- OTP Screens -->
+        <activity android:name=".VerifySignupOtpActivity" />
+        <activity android:name=".VerifyForgotOtpActivity" />
+
+        <!-- Main App -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".NotificationsPermissionsActivity" />
+        <activity android:name=".AddNewPetActivity" />
+        <activity android:name=".PetDetailsActivity" />
+        <activity android:name=".AddMedicalRecordActivity" />
+        <activity android:name=".AddVaccineActivity" />
+        <activity android:name=".AddWeightLogActivity" />
+        <activity android:name=".AddMealActivity" />
+        <activity android:name=".AddActivityLogActivity" />
+        <activity android:name=".ClinicDetailsActivity" />
+        <activity android:name=".BookAppointmentActivity" />
+        <activity android:name=".FindAVetActivity" />
+        <activity android:name=".StoreActivity" />
+
+        <!-- Symptom Checker -->
+        <activity android:name=".SymptomCheckerQ1Activity" />
+        <activity android:name=".SymptomCheckerQ2Activity" />
+        <activity android:name=".SymptomCheckerQ3Activity" />
+        <activity android:name=".SymptomCheckerQ4Activity" />
+        <activity android:name=".SymptomCheckerResultsActivity" />
+        <activity android:name=".SymptomAnalysisActivity" />
+
+        <!-- Behavior Analyzer -->
+        <activity android:name=".BehaviorAnalyzerActivity" />
+        <activity android:name=".BehaviorAnalysisResultActivity" />
+
+        <!-- Food Advisor -->
+        <activity android:name=".FoodAdvisorActivity" />
+
+        <!-- Disease Risk -->
+        <activity android:name=".DiseaseRiskActivity" />
+
+        <!-- AI Vet Chat -->
+        <activity android:name=".AiVetChatActivity" />
+
+        <!-- Grooming Assistant -->
+        <activity android:name=".GroomingAssistantActivity" />
+
+        <!-- Monthly Summary -->
+        <activity android:name=".MonthlySummaryActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F6F1">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_simple_arrow_back"
+            android:background="@drawable/bg_circle_white"
+            android:padding="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Log Activity"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="36dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Activity Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity Type"
+                android:layout_marginBottom="8dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_walk" android:text="Walk" android:checked="true"/>
+                <RadioButton android:id="@+id/radio_run" android:text="Run"/>
+                <RadioButton android:id="@+id/radio_play" android:text="Play"/>
+                <RadioButton android:id="@+id/radio_training" android:text="Training"/>
+            </RadioGroup>
+
+            <!-- Activity Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity Name"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. Morning Walk, Fetch in Park"
+                android:singleLine="true"
+                android:background="@drawable/bg_rounded_input"
+                android:padding="16dp"/>
+
+            <!-- Duration -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration (minutes)"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="30"
+                android:inputType="number"
+                android:background="@drawable/bg_rounded_input"
+                android:padding="16dp"/>
+
+            <!-- Intensity -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intensity"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/radio_low" android:text="Low"/>
+                <RadioButton android:id="@+id/radio_moderate" android:text="Moderate" android:checked="true"/>
+                <RadioButton android:id="@+id/radio_high" android:text="High"/>
+            </RadioGroup>
+
+            <!-- Time -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"/>
+            <RelativeLayout
+                android:id="@+id/time_picker_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_rounded_input"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:30 AM"
+                    android:textColor="#000000"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_clock"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_activity_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Save Activity"
+        android:textColor="#000000"
+        android:background="@drawable/bg_rounded_pill_button"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

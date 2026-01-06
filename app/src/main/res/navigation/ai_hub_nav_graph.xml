@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ai_hub_nav_graph"
+    app:startDestination="@id/aiHubFragment">
+
+    <fragment
+        android:id="@+id/aiHubFragment"
+        android:name="com.example.petpulse.ui.ai.AIHubFragment"
+        android:label="AI Hub" />
+
+</navigation>

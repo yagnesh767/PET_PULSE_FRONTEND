@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1"
+    tools:context=".GroomingChecklistFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="Grooming Checklist" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Pet Context Header -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/petContextCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/petImageView"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/img_1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/petName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Bella"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintStart_toEndOf="@id/petImageView"
+                        app:layout_constraintTop_toTopOf="@id/petImageView"
+                        app:layout_constraintBottom_toTopOf="@id/petBreed"/>
+
+                    <TextView
+                        android:id="@+id/petBreed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Golden Retriever · 3 years"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:layout_constraintStart_toEndOf="@id/petImageView"
+                        app:layout_constraintTop_toBottomOf="@id/petName" />
+
+                     <TextView
+                        android:id="@+id/petContextCaption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Personalized grooming tasks for Bella"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="@android:color/darker_gray"
+                        app:layout_constraintTop_toBottomOf="@id/petImageView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Checklist Section -->
+            <LinearLayout
+                android:id="@+id/checklistContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <!-- Brushing -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkboxBrushing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/taskNameBrushing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Brushing"
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            app:layout_constraintStart_toEndOf="@id/checkboxBrushing"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:id="@+id/frequencyBrushing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="3 to 4 times per week"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textColor="@android:color/darker_gray"
+                            app:layout_constraintStart_toStartOf="@id/taskNameBrushing"
+                            app:layout_constraintTop_toBottomOf="@id/taskNameBrushing"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_brush"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="#FFD54F" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Bathing -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkboxBathing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/taskNameBathing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Bathing"
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            app:layout_constraintStart_toEndOf="@id/checkboxBathing"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:id="@+id/frequencyBathing"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Once every 4 weeks"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textColor="@android:color/darker_gray"
+                            app:layout_constraintStart_toStartOf="@id/taskNameBathing"
+                            app:layout_constraintTop_toBottomOf="@id/taskNameBathing"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_bath"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="#FFD54F" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Trimming -->
+                 <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkboxTrimming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/taskNameTrimming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Trimming"
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            app:layout_constraintStart_toEndOf="@id/checkboxTrimming"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:id="@+id/frequencyTrimming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Every 6 to 8 weeks"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textColor="@android:color/darker_gray"
+                            app:layout_constraintStart_toStartOf="@id/taskNameTrimming"
+                            app:layout_constraintTop_toBottomOf="@id/taskNameTrimming"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_trim"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="#FFD54F" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Ear Cleaning -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkboxEarCleaning"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/taskNameEarCleaning"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Ear Cleaning"
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            app:layout_constraintStart_toEndOf="@id/checkboxEarCleaning"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:id="@+id/frequencyEarCleaning"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Once per week"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textColor="@android:color/darker_gray"
+                            app:layout_constraintStart_toStartOf="@id/taskNameEarCleaning"
+                            app:layout_constraintTop_toBottomOf="@id/taskNameEarCleaning"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_ear"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="#FFD54F" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Nail Trimming -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@android:color/white">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <CheckBox
+                            android:id="@+id/checkboxNailTrimming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/taskNameNailTrimming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Nail Trimming"
+                            android:textStyle="bold"
+                            android:textAppearance="?attr/textAppearanceBody1"
+                            app:layout_constraintStart_toEndOf="@id/checkboxNailTrimming"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginStart="16dp"/>
+
+                        <TextView
+                            android:id="@+id/frequencyNailTrimming"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Once every 3 weeks"
+                            android:textAppearance="?attr/textAppearanceCaption"
+                            android:textColor="@android:color/darker_gray"
+                            app:layout_constraintStart_toStartOf="@id/taskNameNailTrimming"
+                            app:layout_constraintTop_toBottomOf="@id/taskNameNailTrimming"/>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_nail"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:tint="#FFD54F" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Progress Summary -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today’s Progress"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                    <TextView
+                        android:id="@+id/progressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completed: 0 / 5 tasks"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Primary Action -->
+            <Button
+                android:id="@+id/markDoneButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mark Today’s Grooming Done"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_button_yellow"
+                android:textColor="@android:color/black" />
+
+            <!-- Footer Note -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regular grooming helps maintain your pet’s health and comfort."
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

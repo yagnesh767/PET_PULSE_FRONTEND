@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pet_pulse_yellow">#FFD700</color>
+    <color name="soft_green_bg">#E8F5E9</color>
+    <color name="dark_green_text">#1E8E3E</color>
+    <color name="soft_red_bg">#FFEBEE</color>
+    <color name="dark_red_text">#D32F2F</color>
+    <color name="brand_yellow">#FFD700</color>
+    <color name="brand_yellow_light">#FFFBE6</color>
+    <color name="bg_cream">#FAF7F2</color>
+    <color name="yellow">#FFD700</color>
+    <color name="yellow_primary">#FFD700</color>
+    <color name="soft_yellow">#FFF8E1</color>
+    <color name="soft_warning_yellow">#FFC107</color>
+    <color name="dot_inactive">#CCCCCC</color>
+    <color name="otp_border">#CCCCCC</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#808080</color>
+    <color name="risk_low_bg">#E8F5E9</color>
+    <color name="risk_moderate_bg">#FFF8E1</color>
+    <color name="risk_high_bg">#FFEBEE</color>
+    
+    <!-- Splash Screen Colors -->
+    <color name="splash_bg_cream">#FAF7F2</color>
+    <color name="splash_icon_bg">#FFD700</color>
+    <color name="splash_text_primary">#333333</color>
+    <color name="splash_text_secondary">#808080</color>
+</resources>

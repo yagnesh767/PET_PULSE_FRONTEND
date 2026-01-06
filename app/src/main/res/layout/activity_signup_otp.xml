@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Verify Your Email"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Enter the 6-digit code sent to your email address."
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/otpContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/otp1"
+            style="@style/OtpBox" />
+
+        <EditText
+            android:id="@+id/otp2"
+            style="@style/OtpBox" />
+
+        <EditText
+            android:id="@+id/otp3"
+            style="@style/OtpBox" />
+
+        <EditText
+            android:id="@+id/otp4"
+            style="@style/OtpBox" />
+
+        <EditText
+            android:id="@+id/otp5"
+            style="@style/OtpBox" />
+
+        <EditText
+            android:id="@+id/otp6"
+            style="@style/OtpBox" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:text="Verify" />
+
+</LinearLayout>

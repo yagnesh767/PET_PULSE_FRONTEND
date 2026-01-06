@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PetPulse" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_yellow</item>
+        <item name="colorSecondary">@color/brand_yellow</item>
+        <item name="android:windowBackground">@color/bg_cream</item>
+        <item name="android:statusBarColor">@color/bg_cream</item>
+        <item name="android:windowLightStatusBar">true</item> 
+    </style>
+</resources>

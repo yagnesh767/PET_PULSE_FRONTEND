@@ -1,0 +1,27 @@
+<resources>
+    <style name="ChipStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="OtpBox">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_input_rounded</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PetPulse.YellowButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_button_yellow</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>
